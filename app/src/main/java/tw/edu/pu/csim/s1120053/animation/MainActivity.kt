@@ -77,7 +77,10 @@ fun Animation(m:Modifier){
         if (fly) Offset(200f, -50f) else Offset(200f, 400f),
         animationSpec = tween(2000)
     )
-    Column (Modifier.background(backgroundColor)){
+    Column (modifier =m
+        .background(backgroundColor)
+        .fillMaxSize()
+    ){
         Button(
             onClick = { appear = !appear },
             modifier = m.rotate(buttonAngle)
